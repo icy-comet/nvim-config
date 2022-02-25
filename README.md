@@ -23,6 +23,8 @@ Mostly for my own reference. But it could serve as an inspiration point for some
 
 ### Notes:
 - To determine a filetype of a buffer in a window/popup switch the focus/cursor to it and run `echo &ft`
+- `Ctrl+Space` for `nvim-cmp` doesn't work in Windows. See this [issue](https://github.com/neovim/neovim/issues/8435)
+- However, it works fine in WSL.
 
 ### Related Issues
 - https://github.com/goolord/alpha-nvim/issues/90
