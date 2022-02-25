@@ -45,7 +45,7 @@ return packer.startup({
 
     -- LSP & Diagnostics    
 
-    -- use "neovim/nvim-lspconfig"
+    use "neovim/nvim-lspconfig"
     use "JoosepAlviste/nvim-ts-context-commentstring"
 
     use {
@@ -61,12 +61,14 @@ return packer.startup({
 
 
     -- Completion
+    use "hrsh7th/cmp-buffer"
+    use "hrsh7th/cmp-path"
+    use "hrsh7th/cmp-cmdline"
+    use "onsails/lspkind-nvim"
+    use "hrsh7th/nvim-cmp"
     use "rafamadriz/friendly-snippets"
 
-    use {
-      "L3MON4D3/LuaSnip",
-      config = function() require("luasnip.loaders.from_vscode").load() end
-    }
+    use "L3MON4D3/LuaSnip"
 
 
     -- Functionality

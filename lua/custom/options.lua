@@ -20,7 +20,7 @@ local options = {
   scrolloff = 8,                        -- keep 8 lines above the cursor when scrolling 
   signcolumn = "yes",                   -- always show the sign column (where diagnostic signs are shown)
   wrap = false,                         -- forces to properly format code
-  completeopt = {"menu", "noselect"}    -- related to nvim-cmp
+  completeopt = {"menu", "menuone", "noselect"}    -- related to nvim-cmp
 }
 
 for k,v in pairs(options) do

@@ -27,7 +27,7 @@ vim.g.maplocalleader = " "
     -- visual_block_mode = "x",
     -- term_mode = "t",
     -- command_mode = "c",
-  -- Keys
+  -- Keys -> see `:help keycodes`
     -- S - Shift
     -- C - Ctrl
     -- A - Alt
