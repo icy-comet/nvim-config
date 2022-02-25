@@ -27,8 +27,6 @@ for k,v in pairs(options) do
   vim.opt[k] = v
 end
 
-vim.cmd "colorscheme catppuccin"
-
 -- treat words with hyphens between them as a single word
 vim.cmd "set iskeyword+=-"
 

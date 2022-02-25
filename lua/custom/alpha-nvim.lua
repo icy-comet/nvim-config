@@ -25,7 +25,7 @@ dashboard.section.buttons.val = {
   -- see :help map-cmd
   -- see https://www.lua.org/manual/5.3/manual.html#:~:text=%5Cu%7BXXX%7D
   -- to know about embedding utf-8 encoded hex character in a string
-  btn("SPC o c", "\u{fb44} Open Config", open_cfg_cmd),
+  btn("SPC o c", "\u{fb44}  Open Config", open_cfg_cmd),
 }
 
 alpha.setup(dashboard.config)

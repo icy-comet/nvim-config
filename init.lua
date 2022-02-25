@@ -1,5 +1,8 @@
 -- see :help lua-vimscript
-require "impatient".enable_profile()
+
+-- needs to be very first to load
+-- avoid error with pcall on first-time setup
+pcall(require, "impatient")
 require "custom/options"
 require "custom/keymaps"
 require "custom/commands"

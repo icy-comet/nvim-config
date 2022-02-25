@@ -39,7 +39,10 @@ return packer.startup({
     
     -- Color Schemes & UI
 
-    use "catppuccin/nvim"
+    use {
+      "catppuccin/nvim",
+      config = function() vim.cmd "colorscheme catppuccin" end
+    }
  
 
 
