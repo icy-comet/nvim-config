@@ -36,7 +36,6 @@ k("n", "<C-h>", "<C-w>h", opts) -- move to window to the left
 k("n", "<C-j>", "<C-w>j", opts) -- move to window below
 k("n", "<C-k>", "<C-w>k", opts) -- move to window above
 k("n", "<C-l>", "<C-w>l", opts) -- move to window to the right. doesn't work if netrw is open
-k("n", "<C-f>", "<C-w>c", opts) -- close active window
 
 -- Resize a window with arrows
 k("n", "<C-Up>", ":resize -2<CR>", opts)
@@ -47,17 +46,25 @@ k("n", "<C-Right>", ":vertical resize +2<CR>", opts)
 -- Navigate buffers (vim native)
 k("n", "<S-l>", ":bnext<CR>", opts)
 k("n", "<S-h>", ":bprevious<CR>", opts)
-
-k("n", "<C-s>", ":write<CR>", {silent = true, noremap = true, desc = "Write Buffer"})
-k("n", "<leader>bs", ":write<CR>", {silent = true, noremap = true, desc = "Write Buffer"})
-k("n", "<leader>bw", ":write<CR>", {silent = true, noremap = true, desc = "Write Buffer"})
-k("n", "<leader>bc", ":bdelete<CR>", {silent = true, noremap = true, desc = "Close Buffer"})
-k("n", "<leader>bk", ":bdelete!<CR>", {silent = true, noremap = true, desc = "Kill Buffer"})
 k("n", "<leader>bn", ":bnext<CR>", {silent = true, noremap = true, desc = "Next Buffer"})
 k("n", "<leader>bp", ":bprev<CR>", {silent = true, noremap = true, desc = "Prev Buffer"})
 k("n", "<Tab>", ":bnext<CR>", {silent = true, noremap = true, desc = "Next Buffer"})
+
+-- Save Buffer
+k("n", "<C-s>", ":write<CR>", {silent = true, noremap = true, desc = "Write Buffer"})
+k("n", "<leader>bs", ":write<CR>", {silent = true, noremap = true, desc = "Write Buffer"})
+k("n", "<leader>bw", ":write<CR>", {silent = true, noremap = true, desc = "Write Buffer"})
+
+-- Close Buffer
+k("n", "<leader>bc", ":bdelete<CR>", {silent = true, noremap = true, desc = "Close Buffer"})
+k("n", "<leader>bk", ":bdelete!<CR>", {silent = true, noremap = true, desc = "Kill Buffer"})
+
+-- Close Window
 -- seems to affect speed, if done with plain strings
 k("n", "<leader>wc", function() vim.cmd "quit" end, {silent = true, noremap = true, desc = "Close Window"})
 k("n", "<leader>wk", function() vim.cmd "quit!" end, {silent = true, noremap = true, desc = "Kill Window"})
 
+-- Clear word highlighting on search, etc.
 k("n", "<ESC>", ":nohl<CR>", {silent = true, noremap = true, desc = "Clear Highlights"})
+
+k("i", "jk", "<ESC>", {desc = "Escape fast."})

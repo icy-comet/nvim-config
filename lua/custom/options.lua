@@ -4,7 +4,8 @@ local options = {
     clipboard = "unnamedplus", -- copy to system clipboard
     expandtab = true, -- convert tab to spaces
     shiftwidth = 4, -- number of spaces inserted for each indentation
-    tabstop = 4, -- number of spaces for a tab
+    tabstop = 4, -- width of an actual tab character
+    softtabstop = 4, -- make tabbing with spaces feel like a tab as whole
     number = true, -- show line numbers
     relativenumber = true, -- show relative line numbers to the active line
     showtabline = 2, -- show tab page labels
@@ -20,6 +21,7 @@ local options = {
     wrap = false, -- forces to properly format code
     completeopt = { "menu", "menuone", "noselect" }, -- related to nvim-cmp
     fixeol = false, -- don't add extra line
+    guicursor = "n-c-v:block-nCursor",
 }
 
 for k, v in pairs(options) do

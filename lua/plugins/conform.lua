@@ -1,18 +1,5 @@
 local M = {
 	"stevearc/conform.nvim",
-	-- event = { "BufWritePre" },
-	cmd = { "ConformInfo" },
-	keys = {
-		{
-			-- Customize or remove this keymap to your liking
-			"<leader>p",
-			function()
-				require("conform").format({ async = true, lsp_fallback = true })
-			end,
-			mode = "",
-			desc = "Format buffer",
-		},
-	},
 	config = function()
 		require("conform").setup({
 			-- Define formatters
@@ -20,6 +7,7 @@ local M = {
 				lua = { "stylua" },
 				python = { "black" },
 				javascript = { { "prettierd", "prettier" } },
+                typescript = { { "prettierd", "prettier" } },
 			},
 			-- Customize formatters
 			formatters = {
