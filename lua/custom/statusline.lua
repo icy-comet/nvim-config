@@ -68,7 +68,7 @@ local ViMode = {
 
     hl = function(self)
         local mode = self.mode:sub(1, 1) -- get only the first mode character
-        return { fg = "base", bg = self.mode_colors[mode], bold = true, }
+        return { fg = "bright_bg", bg = self.mode_colors[mode], bold = true, }
     end,
 
     update = {
@@ -114,7 +114,7 @@ local ScrollBar ={
         local i = math.floor((curr_line - 1) / lines * #self.sbar) + 1
         return string.rep(self.sbar[i], 2)
     end,
-    hl = { fg = "blue", bg = "surface1" },
+    hl = { fg = "blue", bg = "bright_bg" },
 }
 
 local Git = {
@@ -125,7 +125,7 @@ local Git = {
         self.has_changes = self.status_dict.added ~= 0 or self.status_dict.removed ~= 0 or self.status_dict.changed ~= 0
     end,
 
-    hl = { fg = "rosewater" },
+    hl = { fg = "orange" },
 
     {   -- git branch name
         provider = function(self)
@@ -158,7 +158,7 @@ local Git = {
             local count = self.status_dict.changed or 0
             return count > 0 and ("~" .. count)
         end,
-        hl = { fg = "peach" },
+        hl = { fg = "orange" },
     },
     {
         condition = function(self)
@@ -252,9 +252,9 @@ local Space = {provider = " "}
 local ActiveStatusLine = {
     hl = function(self)
         if(conditions.is_active()) then
-            return {bg = "surface0"}
+            return {bg = "bright_bg"}
         end
-        return {fg = "surface1", bg = "surface0", force = true}
+        return {fg = "bright_fg", bg = "bright_bg", force = true}
     end,
 
     ViMode,

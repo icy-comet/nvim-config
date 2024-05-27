@@ -85,7 +85,7 @@ local TablineCloseButton = {
     { provider = " " },
     {
         provider = "",
-        hl = { fg = "surface2" },
+        hl = { fg = "bright_bg" },
         on_click = {
             callback = function(_, minwid)
                 vim.schedule(function()
