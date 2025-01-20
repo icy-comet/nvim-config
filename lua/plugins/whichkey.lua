@@ -9,16 +9,16 @@ local M = {
         local wk = require("which-key")
         wk.setup()
 
-        wk.register({
-            j = {name = "Harpoon"},
-            b = {name = "Buffer"},
-            f = {name = "Find"},
-            h = {name = "Git"},
-            ht = {name = "Toggle"},
-            w = {name = "Window"},
-            x = {name = "Diagnostics"},
-            p = {name = "Format"}
-        }, {prefix = "<leader>"})
+        wk.add({
+            { "<leader>b",  group = "Buffer" },
+            { "<leader>f",  group = "Find" },
+            { "<leader>h",  group = "Git" },
+            { "<leader>ht", group = "Toggle" },
+            { "<leader>j",  group = "Harpoon" },
+            { "<leader>p",  group = "Format" },
+            { "<leader>w",  group = "Window" },
+            { "<leader>x",  group = "Diagnostics" },
+        })
     end
 }
 
